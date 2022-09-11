@@ -10,21 +10,21 @@ public class BankUse {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		BankAccount bank1 = new BankAccount(getRandomId(), "Shubhendra");
-		BankAccount bank2 = new BankAccount(getRandomId(), "Ramendra");
-		BankAccount bank3 = new BankAccount(getRandomId(), "Sunny");
+		BankAccount bank1 = new BankAccount(getRandomId(), "Shubhendra", AccountType.SAVING);
+		BankAccount bank2 = new BankAccount(getRandomId(), "Ramendra", AccountType.CURRENT);
+		BankAccount bank3 = new BankAccount(getRandomId(), "Sunny", AccountType.SAVING);
 //		bank1.displayAccountInfo();
-		bank1.setOpeningBalance(500);
+		bank1.setOpeningBalance(300);
 //		bank2.displayAccountInfo();
-		bank2.setOpeningBalance(500);
+		bank2.setOpeningBalance(2000);
 //		bank3.displayAccountInfo();
-		bank3.setOpeningBalance(500);
+//		bank3.setOpeningBalance(500);
 		bank1.withdrawAmount(300);
-		bank2.withdrawAmount(150);
-		bank3.withdrawAmount(400);
-		bank1.withdrawAmount(200);
-		bank2.withdrawAmount(350);
-		bank3.withdrawAmount(100);
+		bank2.withdrawAmount(1000);
+//		bank3.withdrawAmount(400);
+//		bank1.withdrawAmount(200);
+//		bank2.withdrawAmount(350);
+//		bank3.withdrawAmount(100);
 	}
 
 }
