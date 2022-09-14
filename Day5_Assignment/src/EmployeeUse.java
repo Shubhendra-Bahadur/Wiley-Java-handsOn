@@ -9,6 +9,17 @@ public class EmployeeUse {
 		return min + (int) (Math.random() * ((max - min) + 1));
 	}
 
+	public static void sortEmployees(Employee[] employee) {
+		Arrays.sort(employee, (emp1, emp2) -> (int) (emp1.getEmpGrossSalary() - emp2.getEmpGrossSalary()));
+	}
+
+	public static void dispDeptWiseEmployee(Employee[] employee, String department) {
+		for (Employee emp : employee) {
+			if (emp.getEmpDept().equals(department))
+				System.out.println(emp.toString());
+		}
+	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Employee employee[] = new Employee[5];
@@ -22,23 +33,21 @@ public class EmployeeUse {
 			System.out.println(emp.toString());
 		}
 
-		Arrays.sort(employee, (emp1, emp2) -> (int) (emp1.getEmpGrossSalary() - emp2.getEmpGrossSalary()));
-		
+		sortEmployees(employee);
+
 		System.out.println("\n---------Sorted Array-----------\n");
-		
+
 		for (Employee emp : employee) {
 			System.out.println(emp.toString());
 		}
-		
+
 		System.out.println("\n---------Employee according to required Department-----------\n");
-		
-		Scanner s=new Scanner(System.in);
+
+		Scanner s = new Scanner(System.in);
 		System.out.println("enter Reqired department name: ");
-		String department=s.nextLine();
-		
-		for(Employee emp:employee) {
-			if(emp.getEmpDept().equals(department)) System.out.println(emp.toString());
-		}
+		String department = s.nextLine();
+
+		dispDeptWiseEmployee(employee, department);
 	}
 
 }
