@@ -22,10 +22,7 @@ public class Employee implements Comparable<Employee> {
 	}
 
 	public static void dispDeptWiseEmployee(Employee[] employee, String department) {
-		for (Employee emp : employee) {
-			if (emp.getEmpDept().equals(department))
-				System.out.println(emp.toString());
-		}
+		EmployeeUtil.dispDeptWiseEmployee(employee, department);
 	}
 
 	@Override
