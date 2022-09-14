@@ -23,7 +23,9 @@ public class EmployeeUse {
 		}
 
 		Arrays.sort(employee, (emp1, emp2) -> (int) (emp1.getEmpGrossSalary() - emp2.getEmpGrossSalary()));
+		
 		System.out.println("\n---------Sorted Array-----------\n");
+		
 		for (Employee emp : employee) {
 			System.out.println(emp.toString());
 		}
