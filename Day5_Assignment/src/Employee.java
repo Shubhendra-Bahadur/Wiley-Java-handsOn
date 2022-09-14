@@ -1,5 +1,5 @@
 
-public class Employee {
+public class Employee implements Comparable<Employee>{
 
 	private int empId;
 	private String empName, empDept;
@@ -21,6 +21,13 @@ public class Employee {
 		return empDept;
 	}
 	
+	public static void dispDeptWiseEmployee(Employee[] employee, String department) {
+		for (Employee emp : employee) {
+			if (emp.getEmpDept().equals(department))
+				System.out.println(emp.toString());
+		}
+	}
+	
 	@Override
 	public String toString() {
 		return "Employee [empId=" + empId + ", empName=" + empName + ", empDept=" + empDept + ", empBasicSalary="
@@ -32,6 +39,12 @@ public class Employee {
 		// TODO Auto-generated method stub
 		if(this.empId==((Employee)emp).empId && this.empName==((Employee)emp).empName) return true;
 		return false;
+	}
+	
+	@Override
+	public int compareTo(Employee o) {
+		// TODO Auto-generated method stub
+		return (int)(this.empGrossSalary-o.empGrossSalary);
 	}
 
 }

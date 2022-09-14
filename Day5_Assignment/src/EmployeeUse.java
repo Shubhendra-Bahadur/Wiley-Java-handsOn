@@ -9,17 +9,6 @@ public class EmployeeUse {
 		return min + (int) (Math.random() * ((max - min) + 1));
 	}
 
-	public static void sortEmployees(Employee[] employee) {
-		Arrays.sort(employee, (emp1, emp2) -> (int) (emp1.getEmpGrossSalary() - emp2.getEmpGrossSalary()));
-	}
-
-	public static void dispDeptWiseEmployee(Employee[] employee, String department) {
-		for (Employee emp : employee) {
-			if (emp.getEmpDept().equals(department))
-				System.out.println(emp.toString());
-		}
-	}
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Employee employee[] = new Employee[5];
@@ -33,7 +22,7 @@ public class EmployeeUse {
 			System.out.println(emp.toString());
 		}
 
-		sortEmployees(employee);
+		Arrays.sort(employee);  // sorting array
 
 		System.out.println("\n---------Sorted Array-----------\n");
 
@@ -47,7 +36,7 @@ public class EmployeeUse {
 		System.out.println("enter Reqired department name: ");
 		String department = s.nextLine();
 
-		dispDeptWiseEmployee(employee, department);
+		Employee.dispDeptWiseEmployee(employee, department); // department wise display
 	}
 
 }
