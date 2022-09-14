@@ -22,7 +22,7 @@ public class EmployeeUse {
 			System.out.println(emp.toString());
 		}
 
-		Arrays.sort(employee);  // sorting array
+		Arrays.sort(employee); // sorting array
 
 		System.out.println("\n---------Sorted Array-----------\n");
 
