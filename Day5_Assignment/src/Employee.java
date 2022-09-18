@@ -20,7 +20,15 @@ public class Employee implements Comparable<Employee> {
 	public String getEmpDept() {
 		return empDept;
 	}
+	
+	public int getEmpId() {
+		return empId;
+	}
 
+	public String getEmpName() {
+		return empName;
+	}
+	
 	public static void dispDeptWiseEmployee(Employee[] employee, String department) {
 		EmployeeUtil.dispDeptWiseEmployee(employee, department);
 	}
@@ -33,15 +41,11 @@ public class Employee implements Comparable<Employee> {
 
 	@Override
 	public boolean equals(Object emp) {
-		// TODO Auto-generated method stub
-		if (this.empId == ((Employee) emp).empId && this.empName == ((Employee) emp).empName)
-			return true;
-		return false;
+		return EmployeeUtil.equals(this, emp);
 	}
 
 	@Override
 	public int compareTo(Employee o) {
-		// TODO Auto-generated method stub
 		return (int) (this.empGrossSalary - o.empGrossSalary);
 	}
 

@@ -38,5 +38,4 @@ public class EmployeeUse {
 
 		Employee.dispDeptWiseEmployee(employee, department); // department wise display
 	}
-
 }

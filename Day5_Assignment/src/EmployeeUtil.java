@@ -7,4 +7,13 @@ public class EmployeeUtil {
 				System.out.println(emp.toString());
 		}
 	}
+
+	public static boolean equals(Object emp1, Object emp2) {
+		// TODO Auto-generated method stub
+		if (((Employee) emp1).getEmpId() == ((Employee) emp2).getEmpId()
+				&& ((Employee) emp1).getEmpName() == ((Employee) emp2).getEmpName())
+			return true;
+		return false;
+	}
+
 }
