@@ -1,4 +1,4 @@
-package Day3_Assignment;
+
 
 import java.util.Scanner;
 

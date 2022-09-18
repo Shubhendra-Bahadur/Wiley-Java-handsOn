@@ -1,4 +1,3 @@
-package Day3_Assignment;
 
 public class Circle {
 	private double radius, area;
