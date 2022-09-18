@@ -23,16 +23,6 @@ public class DateUse {
 		d9.displayDate();
 		Date d10 = new Date(31,1,20);
 		d10.displayDate();
-		Date d11 = new Date(30,2,20);
-		d11.displayDate();
-		Date d12 = new Date(31,9,20);
-		d12.displayDate();
-		Date d13 = new Date(30,9,22);
-		d13.displayDate();
-		Date d14 = new Date(29,2,22);
-		d14.displayDate();
-		Date d15 = new Date(29,2,20);
-		d15.displayDate();
 	}
 
 }
